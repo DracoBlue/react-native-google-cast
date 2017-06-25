@@ -6,6 +6,12 @@ matrix:
       xcode_project: example/ios/example.xcworkspace
       xcode_scheme: example
       podfile: example/ios/Podfile
+      install:
+        - cd example
+        - pod install
+        - npm install
+      script:
+        - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
     - 
       language: android
       android:
@@ -14,3 +20,8 @@ matrix:
           - android-23
           - extra
           - sys-img-armeabi-v7a-android-23
+      install:
+        - cd example
+        - npm install
+      script:
+        - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
