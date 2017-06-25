@@ -2,5 +2,14 @@ matrix:
   include:
     -
       language: objective-c
-      xcode_project: example/ios/example.xcodeproj # path to your xcodeproj folder
-      xcode_scheme: ExampleTests
+      xcode_project: example/ios/example.xcworkspace
+      xcode_scheme: example
+      podfile: example/ios/Podfile
+    - 
+      language: android
+      android:
+        components:
+          - build-tools-23.0.1
+          - android-23
+          - extra
+          - sys-img-armeabi-v7a-android-23
