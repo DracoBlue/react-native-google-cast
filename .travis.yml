@@ -29,5 +29,6 @@ matrix:
         - nvm use 6.11.0   
         - cd example
         - npm install
+        - node_modules/.bin/react-native link react-native-google-cast
       script:
         - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
