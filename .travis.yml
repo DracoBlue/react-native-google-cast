@@ -5,11 +5,13 @@ matrix:
       osx_image: xcode8.3
       xcode_project: example/ios/example.xcworkspace
       xcode_scheme: example
-      podfile: example/ios/Podfile
       install:
+        - nvm install 6.11.0
+        - nvm use 6.11.0
         - cd example
-        - pod install
         - npm install
+        - cd ios
+        - pod install
       script:
         - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
     - 
@@ -21,6 +23,8 @@ matrix:
           - extra
           - sys-img-armeabi-v7a-android-23
       install:
+        - nvm install 6.11.0
+        - nvm use 6.11.0   
         - cd example
         - npm install
       script:
