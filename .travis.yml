@@ -12,6 +12,8 @@ matrix:
         - npm install
         - cd ios
         - pod install
+        - cd ..
+        - node_modules/.bin/react-native link react-native-google-cast
       script:
         - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
     - 
