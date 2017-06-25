@@ -1,0 +1,6 @@
+matrix:
+  include:
+    -
+      language: objective-c
+      xcode_project: example/ios/example.xcodeproj # path to your xcodeproj folder
+      xcode_scheme: ExampleTests
