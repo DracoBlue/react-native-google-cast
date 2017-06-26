@@ -16,6 +16,8 @@ matrix:
         - node_modules/.bin/react-native link react-native-google-cast
       script:
         - node_modules/.bin/react-native bundle --entry-file index.ios.js --bundle-output `pwd`/output
+        - cd ios
+        - xcodebuild test -workspace example.xcworkspace -scheme example -destination 'platform=iOS Simulator,name=iPhone 6'
       #  - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
     - 
       language: android
