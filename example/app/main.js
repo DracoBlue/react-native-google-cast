@@ -91,7 +91,7 @@ class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Is there any chromecast around?</Text>
+        <Text accessibilityLabel="isThereAnyChromecastAroundText">Is there any chromecast around?</Text>
         <Text style={styles.chromecastAround}>{this.state.chromecastAround ? 'YES' : 'NO' }</Text>
         <TouchableOpacity onPress={this.getChromecasts} style={[styles.button]}>
           <Text>Show chromecasts</Text>
