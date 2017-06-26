@@ -15,8 +15,8 @@ matrix:
         - cd ..
         - node_modules/.bin/react-native link react-native-google-cast
       script:
-        - node_modules/.bin/react-native bundle --entry-file index.ios.js --bundle-output /dev/null
-        - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
+        - node_modules/.bin/react-native bundle --entry-file index.ios.js --bundle-output `pwd`
+      #  - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
     - 
       language: android
       android:
@@ -32,5 +32,5 @@ matrix:
         - npm install
         - node_modules/.bin/react-native link react-native-google-cast
       script:
-        - node_modules/.bin/react-native bundle --entry-file index.android.js --bundle-output /dev/null
-        - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
+        - node_modules/.bin/react-native bundle --entry-file index.android.js --bundle-output `pwd`
+     #   - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
