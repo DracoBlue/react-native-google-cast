@@ -34,7 +34,7 @@ matrix:
         - npm install
         - node_modules/.bin/react-native link react-native-google-cast
       script:
-        - node_modules/.bin/react-native bundle --entry-file index.android.js --bundle-output `pwd`/output
+        - node_modules/.bin/react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
         - cd android
         - ./gradlew testDebugUnitTest
      #   - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
