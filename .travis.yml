@@ -3,7 +3,7 @@ matrix:
     -
       language: objective-c
       osx_image: xcode8.3
-      xcode_project: example/ios/example.xcworkspace
+      xcode_project: example/ios/example.xcodeproj
       xcode_scheme: example
       install:
         - nvm install 6.11.0
@@ -11,9 +11,9 @@ matrix:
         - cd example
         - npm install
         - cd ios
-        - pod install
+#        - pod install
         - cd ..
-        - node_modules/.bin/react-native link react-native-google-cast
+#        - node_modules/.bin/react-native link react-native-google-cast
       script:
         - node_modules/.bin/react-native bundle --entry-file index.ios.js --bundle-output /dev/null
         - node_modules/.bin/jest --testPathPattern __tests__/index.ios.js
@@ -30,7 +30,7 @@ matrix:
         - nvm use 6.11.0   
         - cd example
         - npm install
-        - node_modules/.bin/react-native link react-native-google-cast
+#        - node_modules/.bin/react-native link react-native-google-cast
       script:
         - node_modules/.bin/react-native bundle --entry-file index.android.js --bundle-output /dev/null
         - node_modules/.bin/jest --testPathPattern __tests__/index.android.js
