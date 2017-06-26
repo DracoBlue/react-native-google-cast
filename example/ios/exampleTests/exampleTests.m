@@ -13,7 +13,7 @@
 #import <React/RCTLog.h>
 #import <React/RCTRootView.h>
 
-#define TIMEOUT_SECONDS 60
+#define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Is there any chromecast around?"
 
 @interface exampleTests : XCTestCase
